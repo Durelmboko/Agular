@@ -1,0 +1,46 @@
+
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            LISTE DES CANDIDATS
+        </div>
+        <div class="card-body">
+            <div *ngFor="let un_candidat of les_candidats" class="">
+                <table class="table">
+                    <tr>
+                        <th>ID_CANDIDAT</th>
+                        <th>NOM</th>
+                        <th>PRENOM</th>
+                         <td>NAISSANCE</td>
+                         <td>SEXE</td>
+                         <td>ADRESSE</td>
+                         <td>NATIONALITE</td>
+                         <td>EMAIL</td>
+                         <td>CODEF</td>
+                         <td>NIVEAU</td>
+                         <td>pre_requis</td>
+                         <td>ACTION</td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td >{{un_candidat.idcon}}</td>
+                            <td>{{un_candidat.nom}}</td>
+                            <td>{{un_candidat.prenom}}</td>
+                            <td>{{un_candidat.naissance}}</td>
+                            <td>{{un_candidat.sexe}}</td>
+                            <td>{{un_candidat.adresse}}</td>
+                            <td>{{un_candidat.nationalite}}</td>
+                            <td>{{un_candidat.email}}</td>
+                            <td>{{un_candidat.codef}}</td>
+                            <td>{{un_candidat.niveau}}</td>
+                            <td>{{un_candidat.pre_requis}}</td>
+                            <td>{{un_candidat.pre_requis}}</td>
+                            <td><a  class="btn btn-info" [routerLink]="['/dossier',un_candidat.idcon]">creation dossier</a></td>
+                            
+                        </tr>      
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

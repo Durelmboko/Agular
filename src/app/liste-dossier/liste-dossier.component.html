@@ -1,0 +1,33 @@
+
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            LISTE DES DEMANDES DE PREINSCRIPTIONS
+        </div>
+    <div class="center">
+        <div *ngFor="let un_dossier of les_dossiers" class="">
+          <table class="table table-striped">
+              <thead class="text-uppercase bg-info"> 
+                  <tr class="text-white">
+                    <th>NOM</th>
+                    <th>PRENOM</th>
+                     <td>SEXE</td>
+                     <td>pre_requis</td>
+                     <td>etat_dossier</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="table-white">{{un_dossier.nom}}</td>
+                      <td class="table-white">{{un_dossier.prenom}}</td>
+                      <td class="table-white">{{un_dossier.sexe}}</td>
+                      <td class="table-white">{{un_dossier.pre_requis}}</td>
+                      <td class="table-white">{{un_dossier.etat_dossier}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  <a  class="btn btn-success" [routerLink]="['/departement']">RETOUR</a>
+  
+    

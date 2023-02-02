@@ -1,0 +1,60 @@
+<div class="container mt-3"> 
+    <div class="card">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                CREATION DE DOSSIER
+            </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nom:</label>
+                    <input type="text" name="nom"  [(ngModel)]="new_dossier.nom"  class="form-control" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Prenom:</label>
+                    <input type="text" name="prenom"  [(ngModel)]="new_dossier.prenom"  id="" class="form-control" disabled >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">sexe</label>
+                    <input type="text" name="sexe" [(ngModel)]="new_dossier.sexe"  class="form-control" disabled>
+                </div>
+               
+
+                <div class="form-group">
+                    <label for="">pre_requis:</label>
+                    <input type="text" name="pre_requis" [(ngModel)]="new_dossier.pre_requis"  class="form-control"  disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="">ETAT_DOSSIER:</label>
+                <select name="etat_dossier" [(ngModel)]="new_dossier.etat_dossier"  class="form-control">
+                    <option value="">...</option>
+                    <option value="VALIDER">VALIDER</option>  
+                    <option value="REFUSER">REFUSER</option>
+            </select>   
+            </div>
+           
+            <div class="form-group">
+                <label for="">id_secretaire:</label>
+                <select name="idsec" [(ngModel)]="new_dossier.idsec" 
+                    class="form-control">
+                    <option *ngFor="let un_secretaire of les_secretaire" [value]="un_secretaire.idsec">
+                        {{un_secretaire.nom}}
+                    </option>
+                </select>
+            </div>
+
+
+                <p></p>
+                <div class="">
+                    <button type="button" class="btn btn-primary" (click)="envoyer()"> envoyer</button><br><br>
+                    <a  class="btn btn-success" [routerLink]="['/listecandidat']">RETOUR</a>
+                    <a  class="btn btn-warning" [routerLink]="['/liste_dossier']">LISTER</a>
+            </div>
+            </form>
+        </div>
+</div>
+</div>

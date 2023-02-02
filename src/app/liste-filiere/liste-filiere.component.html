@@ -1,0 +1,29 @@
+<div class="container mt-3">
+  <div class="card">
+      <div class="card-header bg-success text-white">
+          LISTE DES FILIERE
+      </div>
+  <div class="center">
+    <div *ngFor="let une_filiere of les_filieres" class="card-body">
+        <table class="table table-striped">
+            <thead class="text-uppercase bg-info">
+
+                <tr class="text-white">
+                    <th>ID FILIERE</th>
+                    <th>NOM </th>
+                    <td>iddepart</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-white">{{une_filiere.codef}}</td>
+                    <td class="table-white">{{une_filiere.nom}}</td>
+                    <td class="table-white">{{une_filiere.iddepart}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<a class="btn btn-warning" [routerLink]="['/departement']">RETOUR</a>
+  

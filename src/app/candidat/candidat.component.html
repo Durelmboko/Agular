@@ -1,0 +1,86 @@
+<div class="container mt-3"> 
+    <div class="card">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                GESTION CAISSIER
+            </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nom:</label>
+                    <input type="text" name="nom"  [(ngModel)]="new_candidat.nom" required autofocus class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Prenom:</label>
+                    <input type="text" name="prenom"  [(ngModel)]="new_candidat.prenom" required autofocus id="" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label for="">naissance:</label>
+                    <input type="date" name="naissance" [(ngModel)]="new_candidat.naissance" required autofocus id="" class="form-control" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="">sexe:</label>
+                    
+                    <select name="sexe" [(ngModel)]="new_candidat.sexe" required autofocus class="form-control">
+                        <option value="">...</option>
+                        <option value="MASCULIN">MASCULIN</option>  
+                        <option value="FEMININ">FEMININ</option>
+                </select>   
+                </div>
+
+                <div class="form-group">
+                    <label for="">Adresse:</label>
+                    <input type="text" name="adresse" [(ngModel)]="new_candidat.adresse" required autofocus id="" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label for="">Nationalité:</label>
+                    <input type="text" name="nationalite" [(ngModel)]="new_candidat.nationalite" required autofocus id="" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                    <label for="">email:</label>
+                    <input type="email" name="email" [(ngModel)]="new_candidat.email" required autofocus id="" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="">Code filiere:</label>
+                    <select name="codef" [(ngModel)]="new_candidat.codef" required autofocus
+                        class="form-control">
+                        <option *ngFor="let une_filiere of les_filieres" [value]="une_filiere.codef">
+                            {{une_filiere.nom}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Niveau:</label>
+                    <select name="niveau" [(ngModel)]="new_candidat.niveau" required autofocus class="form-control">
+                            <option disabled="disabled" selected="selected">   </option>
+                                                                    <option value="LICENCE1">
+                                LICENCE1                                </option>
+                                                                <option value="LICENCE2">
+                                LICENCE2                               </option>
+                                                                <option value="LICENCE3">
+                                LICENCE3                                </option>
+                                                                <option value="Master1">
+                                Master1                                </option>
+                                                                <option value="Master2">
+                                Master2                                </option>
+                                                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="">pre_requis:</label>
+                    <input type="text" name="pre_requis" [(ngModel)]="new_candidat.pre_requis" required autofocus id="" class="form-control" >
+                </div>
+
+                <p></p>
+                <div class="">
+                    <button type="button" class="btn btn-info" (click)="envoyer()"> Postuler</button>
+            </div>
+            </form>
+        </div>
+</div>
+</div>
